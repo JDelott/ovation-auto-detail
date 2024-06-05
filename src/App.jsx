@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
-  const [theme, setTheme] = React.useState(
+  const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
   );
   const element = document.documentElement;
@@ -14,10 +17,21 @@ const App = () => {
       element.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [theme]);
+  }, [element.classList, theme]);
+
+  React.useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div>
       <Navbar theme={theme} setTheme={setTheme} />
+      <Hero theme={theme} />
     </div>
   );
 };

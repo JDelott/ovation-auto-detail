@@ -36,13 +36,13 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
           <div className="hidden md:block">
             <ul className="flex items-center gap-8">
-              {Navlinks.map((data) => (
-                <li key={data.id} className="py-4">
+              {Navlinks.map(({ id, name, link }) => (
+                <li key={id} className="py-4">
                   <a
                     className="py-2 hover:border-b-2 hover:text-primary hover:border-primary transition-colors duration-500 text-lg font-medium"
-                    href={data.link}
+                    href={link}
                   >
-                    {data.name}
+                    {name}
                   </a>
                 </li>
               ))}
