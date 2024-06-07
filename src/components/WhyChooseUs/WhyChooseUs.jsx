@@ -56,7 +56,6 @@ const WhyChooseUs = () => {
               <a href={skill.link}>Learn More</a>
             </div>
           ))}
-          ;
         </div>
       </div>
     </div>

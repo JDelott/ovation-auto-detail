@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import About from "./components/About/About";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
+import CarList from "./components/CarList/CarList";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -36,6 +37,7 @@ const App = () => {
       <Hero theme={theme} />
       <About />
       <WhyChooseUs />
+      <CarList />
     </div>
   );
 };
