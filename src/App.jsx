@@ -3,6 +3,8 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import About from "./components/About/About";
+import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -17,7 +19,7 @@ const App = () => {
       element.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [element.classList, theme]);
+  }, [theme]);
 
   React.useEffect(() => {
     AOS.init({
@@ -32,6 +34,8 @@ const App = () => {
     <div>
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero theme={theme} />
+      <About />
+      <WhyChooseUs />
     </div>
   );
 };
