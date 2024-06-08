@@ -7,6 +7,7 @@ import About from "./components/About/About";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import CarList from "./components/CarList/CarList";
 import Testimonial from "./components/Testimonial/Testimonial";
+import Contact from "./components/Contact/Contact";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -40,6 +41,7 @@ const App = () => {
       <WhyChooseUs />
       <CarList />
       <Testimonial />
+      <Contact />
     </div>
   );
 };
