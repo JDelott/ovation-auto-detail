@@ -109,7 +109,7 @@ const Testimonial = () => {
           <div className="space-y-4 pb-12">
             <p
               data-aos="fade-up"
-              className="text-3xl font-normal text-center sm:text-4xl font-serif"
+              className="text-3xl font-normal text-center sm:text-4xl"
             >
               What Our Clients Say About Us
             </p>
