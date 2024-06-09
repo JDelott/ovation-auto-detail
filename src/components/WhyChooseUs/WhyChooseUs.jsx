@@ -10,7 +10,8 @@ const skillsData = [
       <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "lorem ipsom dolor sit amet consectetur, adipisiscicing elit",
+    description:
+      "At Ovation Auto Detail, we offer competitive pricing for premium mobile auto detailing services, ensuring you get the best value for your money.",
     aosDelay: "0",
   },
   {
@@ -19,16 +20,18 @@ const skillsData = [
       <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "lorem ipsom dolor sit amet consectetur, adipisiscicing elit",
+    description:
+      "Our team at Ovation Auto Detail guarantees fast and safe detailing services, using top-of-the-line products and techniques to protect your vehicle.",
     aosDelay: "500",
   },
   {
-    name: "Experience Drivers",
+    name: "Experienced Detailers",
     icon: (
       <SlNote className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "lorem ipsom dolor sit amet consectetur, adipisiscicing elit",
+    description:
+      "Trust our experienced and professional detailers at Ovation Auto Detail to treat your car with the utmost care and precision.",
     aosDelay: "1000",
   },
 ];
@@ -38,7 +41,7 @@ const WhyChooseUs = () => {
     <div className="py-14 dark:bg-black dark:text-white sm:min-h[600px] sm:grid sm:place-items-center">
       <div className="container">
         <div className="pb-12">
-          <h1 className="text-3xl font-semibold text-center font-serif sm:text-4xl">
+          <h1 className="text-3xl text-center font-normal sm:text-4xl">
             Why Choose Us
           </h1>
         </div>
@@ -53,7 +56,7 @@ const WhyChooseUs = () => {
               <div className="grid place-items-center">{skill.icon}</div>
               <h1>{skill.name}</h1>
               <p>{skill.description}</p>
-              <a href={skill.link}>Learn More</a>
+              {/* <a href={skill.link}>Learn More</a> */}
             </div>
           ))}
         </div>

@@ -9,7 +9,7 @@ const Navlinks = [
   },
   {
     id: "2",
-    name: "CARS",
+    name: "SERVICES",
     link: "/#cars",
   },
   {
@@ -30,9 +30,7 @@ const Navbar = ({ theme, setTheme }) => {
       <div className="container">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-bold font-serif">
-              Ovation Auto Detail{" "}
-            </h1>
+            <h1 className="text-3xl font-sans">Ovation Auto Detail </h1>
           </div>
           <div className="hidden md:block">
             <ul className="flex items-center gap-8">
