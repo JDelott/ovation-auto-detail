@@ -102,7 +102,7 @@ const Navbar = ({ theme, setTheme }) => {
   };
   return (
     <div
-      className="relative z-10 shadow-md w-full dark:bg-black dark:text-white duration-300
+      className="relative z-10 shadow-md w-full dark:bg-dark bg-slate-100 dark:text-white duration-300
     "
     >
       <div className="container py-2 md:py-0">

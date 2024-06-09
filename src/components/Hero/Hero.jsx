@@ -19,7 +19,7 @@ const Hero = ({ theme }) => {
             />
           </div>
           <div className="order-2 sm:order-1 space-y-5 sm:pr-32">
-            <p data-aos="fade-up" className="text-primary text-2xl font-serif">
+            <p data-aos="fade-up" className="text-primary text-2xl font-">
               Providing mobile auto detailing services throughout Los Angeles,
               California.
             </p>
@@ -33,13 +33,14 @@ const Hero = ({ theme }) => {
             <p data-aos="fade-up" data-aos-delay="1000" className="text-4xl">
               We Come To You!
             </p>
-            <button
+            <p className="text-2xl text-primary">Contact Us Now!</p>
+            {/* <button
               data-aos="fade-up"
               data-aos-duration="1500"
               className="btn bg-primary text-black px-6 py-2 rounded-md hover:bg-primary/80 duration-300"
             >
               Contact Us Now!
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
