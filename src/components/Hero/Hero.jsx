@@ -19,7 +19,7 @@ const Hero = ({ theme }) => {
             />
           </div>
           <div className="order-2 sm:order-1 space-y-5 sm:pr-32">
-            <p data-aos="fade-up" className="text-primary text-2xl font-normal">
+            <p data-aos="fade-up" className="text-primary text-1xl font-normal">
               Providing mobile auto detailing services throughout Los Angeles,
               California.
             </p>
@@ -38,7 +38,7 @@ const Hero = ({ theme }) => {
               data-aos-duration="1000"
               className="text-2xl text-primary"
             >
-              Contact Us Now!
+              Contact: (818) 625-4488
             </div>
             {/* <button
               data-aos="fade-up"
