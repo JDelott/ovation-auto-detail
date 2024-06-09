@@ -102,7 +102,6 @@ const TestimonialData = [
 const Testimonial = () => {
   return (
     <>
-      <span id="about"></span>
       <div className="dark:bg-black dark:text-white py-14 sm:pb-24">
         <div className="container">
           {/* Header */}

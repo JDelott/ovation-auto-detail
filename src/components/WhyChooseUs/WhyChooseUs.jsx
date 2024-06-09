@@ -2,12 +2,15 @@ import React from "react";
 import { FaCameraRetro } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
 import { SlNote } from "react-icons/sl";
+import { IoPricetagsSharp } from "react-icons/io5";
+import { MdOutlineHealthAndSafety } from "react-icons/md";
+import { FaUserCheck } from "react-icons/fa";
 
 const skillsData = [
   {
     name: "Best Price",
     icon: (
-      <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
+      <IoPricetagsSharp className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
     description:
@@ -17,7 +20,7 @@ const skillsData = [
   {
     name: "Fast and Safe",
     icon: (
-      <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
+      <MdOutlineHealthAndSafety className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
     description:
@@ -27,7 +30,7 @@ const skillsData = [
   {
     name: "Experienced Detailers",
     icon: (
-      <SlNote className="text-5xl text-primary group-hover:text-black duration-300" />
+      <FaUserCheck className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
     description:
@@ -41,7 +44,11 @@ const WhyChooseUs = () => {
     <div className="py-14 dark:bg-black dark:text-white sm:min-h[600px] sm:grid sm:place-items-center">
       <div className="container">
         <div className="pb-12">
-          <h1 className="text-3xl text-center font-normal sm:text-4xl">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="1500"
+            className="text-3xl text-center font-normal sm:text-4xl"
+          >
             Why Choose Us
           </h1>
         </div>

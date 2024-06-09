@@ -33,6 +33,7 @@ const carList = [
 const CarList = () => {
   return (
     <div className="pb-24 pt-12 dark:bg-dark bg-slate-100">
+      <span id="priceList"></span>
       <div className="container">
         {/* Heading */}
         <h1

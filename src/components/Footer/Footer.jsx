@@ -4,6 +4,7 @@ import { FaInstagram, FaLocationArrow, FaMobileAlt } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 dark:bg-dark dark:text-white text-justify">
+      <span id="contact"></span>
       <div className="container mx-auto py-8">
         <div className="flex flex-col items-center md:flex-row md:justify-between text-center md:text-left">
           {/* Company Details */}
