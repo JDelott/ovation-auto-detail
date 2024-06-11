@@ -20,15 +20,15 @@ const Hero = ({ theme }) => {
           </div>
           <div className="order-2 sm:order-1 space-y-5 sm:pr-32">
             <p data-aos="fade-up" className="text-primary text-1xl font-normal">
-              Providing mobile auto detailing services throughout Los Angeles,
-              California.
+              Providing mobile auto detailing services throughout <br /> Los
+              Angeles, California.
             </p>
             <h1
               data-aos="fade-up"
               data-aos-delay="600"
-              className="flex text-4xl md:text-5xl lg:text-7xl font-normal whitespace-nowrap"
+              className="flex text-4xl md:text-5xl lg:text-7xl font-normal "
             >
-              Ovation Auto Detail
+              Ovation <br /> Auto Detail
             </h1>
             <p data-aos="fade-up" data-aos-delay="1500" className="text-4xl">
               We Come To You!

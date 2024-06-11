@@ -45,7 +45,7 @@ const CarList = () => {
         <p
           data-aos="fade-up"
           data-aos-delay="400"
-          className="text-2xl pb-10 dark:text-gray-300 text-black"
+          className="text-xl font-thin pb-10 dark:hover:border-primary text-center dark:text-gray-300 text-black"
         >
           At Ovation Auto Detail, we offer competitive pricing for premium
           mobile auto detailing services, ensuring you get the best value for
@@ -59,7 +59,7 @@ const CarList = () => {
                 key={data.package}
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
-                className="space-y-3 border-2 border-gray-300 dark:border-gray-700 hover:border-primary p-3 rounded-xl relative group bg-white dark:bg-dark"
+                className="space-y-3 border-2 border-gray-300 hover:border-primary dark:border-gray-700  p-3 rounded-xl relative group bg-white dark:bg-dark"
               >
                 <div className="w-full h-[120px]">
                   <img
