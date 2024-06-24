@@ -429,7 +429,7 @@
 // };
 
 // export default Navbar;
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { Link } from "react-scroll";
@@ -460,13 +460,30 @@ export const Navlinks = [
 
 const Navbar = ({ theme, setTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+
   return (
-    <div className="relative z-10 shadow-md w-full dark:bg-dark bg-slate-100 dark:text-white duration-300 hover:cursor-pointer">
+    <div
+      className={`fixed w-full z-10 transition-all duration-300 ${
+        visible ? "top-0" : "-top-16"
+      } shadow-md dark:bg-dark bg-slate-100 dark:text-white`}
+    >
       <div className="container py-2 md:py-0">
         <div className="flex justify-between items-center">
           <div>
@@ -486,7 +503,6 @@ const Navbar = ({ theme, setTheme }) => {
                   </Link>
                 </li>
               ))}
-              {/* DarkMode feature implement */}
               {theme === "dark" ? (
                 <BiSolidSun
                   onClick={() => setTheme("light")}
@@ -500,9 +516,7 @@ const Navbar = ({ theme, setTheme }) => {
               )}
             </ul>
           </nav>
-          {/* Mobile view */}
           <div className="flex items-center gap-4 md:hidden">
-            {/* dark mode */}
             {theme === "dark" ? (
               <BiSolidSun
                 onClick={() => setTheme("light")}
@@ -514,7 +528,6 @@ const Navbar = ({ theme, setTheme }) => {
                 className="text-2xl"
               />
             )}
-            {/* Mobile Hamburger icon */}
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
